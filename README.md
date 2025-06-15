@@ -1,10 +1,10 @@
-﻿TaskMaster-LocalStorage
+# **TaskMaster-LocalStorage**
 
 A modern, responsive todo application built with React and Vite, featuring local storage persistence and beautiful animations.
 
 Demo:- https://shreytodo.vercel.app
 
-🚀 Features
+# 🚀 Features
 
 - **Task Management**: Create, edit, delete, and mark tasks as complete
 - **Local Storage**: All tasks are automatically saved to your browser's local storage
@@ -13,7 +13,7 @@ Demo:- https://shreytodo.vercel.app
 - **Modern UI**: Clean and intuitive interface with Heroicons
 - **Real-time Updates**: Instant feedback and updates without page refresh
 
-🛠️ Technologies Used
+# 🛠️ Technologies Used
 
 - **React 18** - Modern React with hooks and functional components
 - **Vite** - Fast build tool and development server
@@ -22,7 +22,7 @@ Demo:- https://shreytodo.vercel.app
 - **Heroicons** - Beautiful hand-crafted SVG icons
 - **Local Storage API** - Browser-based data persistence
 
-📦 Installation
+# 📦 Installation
 
 1. **Clone the repository**
    ```bash
@@ -47,7 +47,7 @@ Demo:- https://shreytodo.vercel.app
 4. **Open your browser**
    Navigate to `http://localhost:5173` to see the application running.
 
-🎯 Usage
+# 🎯 Usage
 
 Adding Tasks
 - Click the "+" button or press Enter in the input field
@@ -65,7 +65,7 @@ Data Persistence
 - Your tasks will persist between browser sessions
 - No account or internet connection required
 
-🏗️ Project Structure
+# 🏗️ Project Structure
 
 ```
 TaskMaster-LocalStorage/
@@ -82,14 +82,14 @@ TaskMaster-LocalStorage/
 └── README.md          # Project documentation
 ```
 
-📱 Browser Support
+#📱 Browser Support
 
 This application works in all modern browsers that support:
 - ES6+ JavaScript
 - Local Storage API
 - CSS Grid and Flexbox
 
-🚀 Deployment
+# 🚀 Deployment
 
 Build for Production
 ```bash
@@ -111,7 +111,7 @@ The built files will be in the `dist/` directory, ready for deployment to any st
 - GitHub Pages
 - Firebase Hosting
 
-🤝 Contributing
+# 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -119,11 +119,11 @@ The built files will be in the `dist/` directory, ready for deployment to any st
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-📄 License
+# 📄 License
 
 This project is licensed under the MIT License - see the (LICENSE) file for details.
 
-🙏 Acknowledgments
+#🙏 Acknowledgments
 
 - [React](https://reactjs.org/) for the amazing framework
 - [Vite](https://vitejs.dev/) for the fast build tool
