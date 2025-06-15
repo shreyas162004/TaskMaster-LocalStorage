@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 // library imports
 import { PlusIcon } from '@heroicons/react/24/solid'
@@ -17,11 +18,14 @@ const CustomForm = ({ addTask }) => {
   }
 
   return (
-    <form
-      className="todo"
+    <motion.form
+      className="todo-form"
       onSubmit={handleFormSubmit}
-      >
-      <div className="wrapper">
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+    >
+      <div className="input-wrapper">
         <input
           type="text"
           id="task"
@@ -31,21 +35,20 @@ const CustomForm = ({ addTask }) => {
           required
           autoFocus
           maxLength={60}
-          placeholder="Enter Task"
+          placeholder="What needs to be done?"
         />
-        <label
-          htmlFor="task"
-          className="label"
-        >Enter Task</label>
       </div>
-      <button
+      <motion.button
         className="btn"
         aria-label="Add Task"
         type="submit"
-        >
-        <PlusIcon />
-      </button>
-    </form>
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <PlusIcon width={20} height={20} />
+        Add Task
+      </motion.button>
+    </motion.form>
   )
 }
 export default CustomForm

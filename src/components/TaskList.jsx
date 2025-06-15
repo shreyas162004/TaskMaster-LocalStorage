@@ -1,22 +1,29 @@
 // component import
 import TaskItem from './TaskItem';
-
-// styles
-import styles from './TaskList.module.css';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const TaskList = ({ tasks, deleteTask, toggleTask, enterEditMode }) => {
   return (
-    <ul className={styles.tasks}>
-      {tasks.sort((a, b) => b.id - a.id).map(task => (
-        <TaskItem
-          key={task.id}
-          task={task}
-          deleteTask={deleteTask}
-          toggleTask={toggleTask}
-          enterEditMode={enterEditMode}
-        />
-      ))
-      }
+    <ul className="tasks">
+      <AnimatePresence>
+        {tasks.sort((a, b) => b.id - a.id).map(task => (
+          <motion.li
+            key={task.id}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            layout
+          >
+            <TaskItem
+              task={task}
+              deleteTask={deleteTask}
+              toggleTask={toggleTask}
+              enterEditMode={enterEditMode}
+            />
+          </motion.li>
+        ))}
+      </AnimatePresence>
     </ul>
   )
 }
